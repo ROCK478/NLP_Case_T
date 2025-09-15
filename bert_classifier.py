@@ -1,8 +1,9 @@
 import numpy as np
 import torch
+from torch.ptim import AdamW
 from transformers import BertTokenizer, BertForSequenceClassification
 from torch.utils.data import Dataset, DataLoader
-from transformers import AdamW, get_linear_schedule_with_warmup
+from transformers import get_linear_schedule_with_warmup
 
 from bert_dataset import CustomDataset
 
