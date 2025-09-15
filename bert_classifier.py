@@ -30,7 +30,7 @@ class BertClassifier:
         self.valid_loader = DataLoader(self.valid_set, batch_size=2, shuffle=True)
 
         # helpers initialization
-        self.optimizer = AdamW(self.model.parameters(), lr=2e-5, correct_bias=False)
+        self.optimizer = AdamW(self.model.parameters(), lr=2e-5)
         self.scheduler = get_linear_schedule_with_warmup(
                 self.optimizer,
                 num_warmup_steps=0,
